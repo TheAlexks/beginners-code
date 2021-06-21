@@ -1,0 +1,110 @@
+#+TITLE: Learning Haskell
+#+DESCRIPTION: Haskell for beginners
+#+AUTHOR: Alex
+
+* What is this file?
+Before you start reading this, you need to know what this file is.
+I am learning Haskell, so I this file is a "beginners guide" to it from a beginners perspective.
+
+** When I open this file it looks all messy with "*" all over the file..
+This file is an org mode file. So, you need a Emacs or some distro of it to read it properly.
+
+* What is Haskell?
+Haskell is a functional programming language.
+And it's lazy. Which means it will run only pieces of code that it needs to be ran. Hope that makes sense.
+
+** Purpose?
+To be honest, I don't know.
+Google it, but you won't find an answer to this specific question.
+
+* Starting with Haskell
+** Basics
+*** Comments
+-- Single line comment
+
+{- Multi line
+    comment
+-}
+
+*** Imports
+To be able to actually code in haskell, we need to import some stuff.
+
+**** What do we need to import?
+***** Syntax
+import + name of library
+
+import Data.List
+
+And now we can code!
+
+** Hello, world!
+import Data.List
+
+And now, there's a couple of ways to print out something.
+
+Using "print" or "putStrLn".
+
+*** Print way
+main = print("Hello, world!")
+
+*** putStrLn way
+main = putStrLn "Hello, world!"
+    (Note: As the name suggests, you can only print strings, chars with putStrLn.)
+
+
+** Maths
+Ofc, we can do some calculations.
+
+myAdd = 5 + 4
+mySub = 5 - 4
+myMulti = 5 * 4
+myDiv = 5 / 4
+
+** Variables
+*** How to declare a variable?
+For example, integer.
+
+myInt :: Int
+myInt = 5
+
+Ta-da!
+
+** Data types
+Like any other lang, we have different types of variables.
+
+*** Num vars
+Int - whole number | cannot be infinite
+
+myInt :: Int
+myInt = 5
+    (Note: Type of var needs to be a capital letter)
+
+Integer - same as Int | can be as big as pc can handle
+
+myInteger :: Integer
+myInteger = 69
+
+Float - decimal number | up to 8 decimals
+
+myFloat :: Float
+myFloat = 5.12345678
+
+Double - same as float | up to 16 decimals
+
+myDouble :: Double
+myDouble = 5.1234567890123456
+
+*** Char vars
+Char - single character
+
+myChar :: Char
+myChar = 'A'
+    (Note: Chars must be written in single quotes.)
+
+String == list of chars
+
+myString :: [Char]
+myString = "Alex"
+myString' = ['A','l','e','x']
+
+    (Note: myString == myString')
