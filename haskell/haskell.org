@@ -4,7 +4,7 @@
 
 * What is this file?
 Before you start reading this, you need to know what this file is.
-I am learning Haskell, so I this file is a "beginners guide" to it from a beginners perspective.
+I am learning Haskell, so this file is a "beginners guide" to it from a beginners perspective.
 
 ** When I open this file it looks all messy with "*" all over the file..
 This file is an org mode file. So, you need a Emacs or some distro of it to read it properly.
@@ -53,19 +53,23 @@ main = putStrLn "Hello, world!"
 
 
 ** Maths
+#+begin_src haskell
 Ofc, we can do some calculations.
 
 myAdd = 5 + 4
 mySub = 5 - 4
 myMulti = 5 * 4
 myDiv = 5 / 4
+#+end_src
 
 ** Variables
 *** How to declare a variable?
+#+begin_src haskell
 For example, integer.
 
 myInt :: Int
 myInt = 5
+#+end_src
 
 Ta-da!
 
@@ -73,6 +77,7 @@ Ta-da!
 Like any other lang, we have different types of variables.
 
 *** Num vars
+#+begin_src haskell
 Int - whole number | cannot be infinite
 
 myInt :: Int
@@ -93,8 +98,11 @@ Double - same as float | up to 16 decimals
 
 myDouble :: Double
 myDouble = 5.1234567890123456
+#+end_src
 
 *** Char vars
+
+#+begin_src haskell
 Char - single character
 
 myChar :: Char
@@ -108,3 +116,20 @@ myString = "Alex"
 myString' = ['A','l','e','x']
 
     (Note: myString == myString')
+#+end_src
+
+*** User input
+#+begin_src haskell
+yourName :: [Char]
+yourname = ""
+
+main = do
+
+putStrLn "Enter your name: "
+yourName <- getLine
+
+print("Your name is " ++ yourName)
+return()
+#+end_src
+
+
